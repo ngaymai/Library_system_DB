@@ -1,0 +1,68 @@
+.LOG
+
+MariaDB [(none)]> show grants for 'staff'@'localhost';
++-----------------------------------------------------------------------------------------------------------------------+
+| Grants for staff@localhost                                                                                            |
++-----------------------------------------------------------------------------------------------------------------------+
+| GRANT ALL PRIVILEGES ON *.* TO `staff`@`localhost` IDENTIFIED BY PASSWORD '*032197AE5731D4664921A6CCAC7CFCE6A0698693' |
+| GRANT ALL PRIVILEGES ON `libdb`.`invalid_bill` TO `staff`@`localhost`                                                 |
+| GRANT SELECT ON `libdb`.`member` TO `staff`@`localhost`                                                               |
+| GRANT SELECT ON `libdb`.`account` TO `staff`@`localhost`                                                              |
+| GRANT SELECT ON `libdb`.`staff` TO `staff`@`localhost`                                                                |
+| GRANT ALL PRIVILEGES ON `libdb`.`subject_area` TO `staff`@`localhost`                                                 |
+| GRANT ALL PRIVILEGES ON `libdb`.`book` TO `staff`@`localhost`                                                         |
+| GRANT ALL PRIVILEGES ON `libdb`.`valid_bill` TO `staff`@`localhost`                                                   |
+| GRANT ALL PRIVILEGES ON `libdb`.`bill` TO `staff`@`localhost`                                                         |
+| GRANT ALL PRIVILEGES ON `libdb`.`language` TO `staff`@`localhost`                                                     |
+| GRANT ALL PRIVILEGES ON `libdb`.`author` TO `staff`@`localhost`                                                       |
+| GRANT ALL PRIVILEGES ON `libdb`.`book_rental` TO `staff`@`localhost`                                                  |
++-----------------------------------------------------------------------------------------------------------------------+
+12 rows in set (0.000 sec)
+
+///////////// member role//////////////////
+MariaDB [(none)]> show grants for 'member'@'localhost';
++---------------------------------------------------------------------------------------------------------------+
+| Grants for member@localhost                                                                                   |
++---------------------------------------------------------------------------------------------------------------+
+| GRANT USAGE ON *.* TO `member`@`localhost` IDENTIFIED BY PASSWORD '*032197AE5731D4664921A6CCAC7CFCE6A0698693' |
+| GRANT SELECT ON `libdb`.`bill` TO `member`@`localhost`                                                        |
+| GRANT SELECT ON `libdb`.`account` TO `member`@`localhost`                                                     |
+| GRANT SELECT ON `libdb`.`author` TO `member`@`localhost`                                                      |
+| GRANT SELECT ON `libdb`.`invalid_bill` TO `member`@`localhost`                                                |
+| GRANT SELECT ON `libdb`.`member` TO `member`@`localhost`                                                      |
+| GRANT SELECT ON `libdb`.`subject_area` TO `member`@`localhost`                                                |
+| GRANT SELECT ON `libdb`.`valid_bill` TO `member`@`localhost`                                                  |
+| GRANT SELECT ON `libdb`.`language` TO `member`@`localhost`                                                    |
+| GRANT SELECT ON `libdb`.`book` TO `member`@`localhost`                                                        |
+| GRANT SELECT, UPDATE (due_date) ON `libdb`.`book_rental` TO `member`@`localhost`                              |
+| GRANT SELECT ON `libdb`.`staff` TO `member`@`localhost`                                                       |
+| GRANT EXECUTE ON PROCEDURE `libdb`.`bill_detail` TO `member`@`localhost`                                      |
+| GRANT EXECUTE ON PROCEDURE `libdb`.`find_member_detail` TO `member`@`localhost`                               |
+| GRANT EXECUTE ON PROCEDURE `libdb`.`top_book` TO `member`@`localhost`                                         |
+| GRANT EXECUTE ON PROCEDURE `libdb`.`search_book` TO `member`@`localhost`                                      |
+| GRANT EXECUTE ON PROCEDURE `libdb`.`find_author` TO `member`@`localhost`                                      |
+| GRANT EXECUTE ON PROCEDURE `libdb`.`list_book` TO `member`@`localhost`                                        |
+| GRANT EXECUTE ON PROCEDURE `libdb`.`find_bill_from_ssn` TO `member`@`localhost`                               |
+| GRANT EXECUTE ON PROCEDURE `libdb`.`find_subject` TO `member`@`localhost`                                     |
+| GRANT EXECUTE ON PROCEDURE `libdb`.`find_language` TO `member`@`localhost`                                    |
+| GRANT EXECUTE ON PROCEDURE `libdb`.`find_bill_from_bid` TO `member`@`localhost`                               |
+| GRANT EXECUTE ON PROCEDURE `libdb`.`find_book` TO `member`@`localhost`                                        |
+| GRANT EXECUTE ON PROCEDURE `libdb`.`top_member` TO `member`@`localhost`                                       |
+| GRANT EXECUTE ON PROCEDURE `libdb`.`find_punish` TO `member`@`localhost`                                      |
+| GRANT EXECUTE ON PROCEDURE `libdb`.`extend_book` TO `member`@`localhost`                                      |
+| GRANT EXECUTE ON FUNCTION `libdb`.`check_valid_bill` TO `member`@`localhost`                                  |
++---------------------------------------------------------------------------------------------------------------+
+27 rows in set (0.000 sec)
+
+
+///////////// system//////////////////////
+MariaDB [(none)]> show grants for 'system'@'localhost';
++------------------------------------------------------------------------------------------------------------------------------------------+
+| Grants for system@localhost                                                                                                              |
++------------------------------------------------------------------------------------------------------------------------------------------+
+| GRANT ALL PRIVILEGES ON *.* TO `system`@`localhost` IDENTIFIED BY PASSWORD '*032197AE5731D4664921A6CCAC7CFCE6A0698693' WITH GRANT OPTION |
++------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.000 sec)
+10:22 PM 12/13/2022
+
+10:22 PM 12/13/2022

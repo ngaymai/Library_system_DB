@@ -1,0 +1,166 @@
+.sidebar {
+  flex: 1;
+  border-right: 0.5px solid rgb(230, 227, 227);
+  min-height: 100vh;
+  background-color: white;
+}
+
+.sidebar > .top {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  /* color: #6439ff; */
+  color: #1977f3;
+  padding-top: 15px;
+}
+
+.sidebar > hr {
+  height: 0;
+  border: 0.5px solid rgb(230, 227, 227);
+}
+
+.sidebar > .center {
+  padding-left: 10px;
+}
+
+.title {
+  font-size: 10px;
+  font-weight: bold;
+  color: #999;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.icon {
+  color: #1977f3;
+}
+.sidebar > .center > ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+li {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+}
+li:hover {
+  background-color: #ece8ff;
+}
+
+a > .active {
+  background-color: #ece8ff;
+}
+
+.sidebar > .center > ul span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #888;
+  margin-left: 10px;
+}
+
+.addbook,
+.addBill,
+.mngBook,
+.mngMember,
+.createBill,
+.dashboard,
+.mngBill,
+.bookDetail {
+  display: flex;
+}
+
+.addbook-container {
+  flex: 6;
+}
+
+.addbook-container,
+.addBill,
+.addBill-container,
+.mngBook-container,
+.mngMember-container,
+.createBill-container,
+.createBill-container,
+.mngBill-container,
+.bookDetail-container,
+.dashboard-container {
+  flex: 6;
+}
+
+.mngBook-subcontainer,
+.mngMember-subcontainer,
+.mngBill-subcontainer {
+  margin: 0px 50px 30px 20px;
+}
+
+.mngBook-subcontainer,
+.mngBill-subcontainer > .search-bar {
+  margin-top: 20px;
+}
+
+.status-checkbox {
+  margin-top: 20px;
+}
+
+.table {
+  margin-top: 50px;
+}
+.back-btn {
+  height: 52px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter;
+  font-size: 18px;
+  line-height: 28px;
+  color: #171a1fff;
+  background: #00000000;
+  opacity: 1;
+  border: none;
+  border-radius: 12px;
+  gap: 8px;
+}
+
+.a-text-bold {
+  font-weight: 700 !important;
+}
+
+.welcome {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.top5-book,
+.top5-member {
+  margin: 100px 30px 50px 70px;
+}
+.top5-book > h6,
+.top5-member > h6 {
+  margin-bottom: 30px;
+}
+
+.billOption-form {
+  margin-left: 60px;
+}
+
+/* .bottom {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.bottom > .colorOption {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid #7451f8;
+  cursor: pointer;
+  margin: 5px;
+} */
